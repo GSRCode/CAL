@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Setting a default value to a function parameter.</p>
+    <p id="demo"></p>
+
+    <p>A function can access variables defined inside the function:</p>
+    <button type="button" onclick="myFunction2()">Click Me!</button>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        var b  = 5;
+        function myFunction(x, y) {
+            if (y === undefined) {
+                y = 2;
+            }
+            return x * y;
+        }
+
+        function myFunction2() {
+            var a = 4;
+            b = b*b;
+            document.getElementById("demo2").innerHTML = a * a;
+            document.getElementById("demo4").innerHTML = b;
+        }
+        //document.getElementById("demo3").innerHTML = a; // gives - Uncaught ReferenceError: a is not defined in console.
+        document.getElementById("demo4").innerHTML = b;
+
+        document.getElementById("demo").innerHTML = myFunction(5);
+
+
+    </script>
+</body>
+
+</html>

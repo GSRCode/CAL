@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <p id="result"></p>
+    <p id="demo"></p>
+
+    <p id="demo0"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        // My heading:
+        document.getElementById("myH").innerHTML = "JavaScript Comments";
+        // My paragraph:
+        document.getElementById("myP").innerHTML = "My first paragraph.";
+
+        var num1 = 5;
+        var num2 = 6;
+        var sum = num1 + num2;
+        document.getElementById("result").innerHTML = "The total sum is: " + sum;
+
+        var x, y, z;  // Statement 1
+        x = 5;        // Statement 2
+        y = 6;        // Statement 3
+        z = x + y;    // Statement 4
+        document.getElementById("demo").innerHTML = "The value of z is " + z + ".";
+
+        // Creating variables
+        var a1 = "Welcome to Codingal.";
+        var b1 = 'Learn about values and types.';
+
+        // Printing variable values
+        document.write(a1 + "<br>");
+        document.write(b1);
+
+        x = 5;
+        y = 2;
+        z = x + y;
+        var a = x - y;
+        var b = x * y;
+        var c = x / y;
+        document.getElementById("demo0").innerHTML = z;
+        document.getElementById("demo1").innerHTML = a;
+        document.getElementById("demo2").innerHTML = b;
+        document.getElementById("demo3").innerHTML = c;
+
+        // assignment operator//
+        x += 4;
+        document.getElementById("demo4").innerHTML = x;   
+    </script>
+</body>
+
+</html>

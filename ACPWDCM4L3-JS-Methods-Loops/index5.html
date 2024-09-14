@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript String Methods and Loops</h2>
+    <p>Numbers form 1 to 10</p>
+    <p id="result"></p>
+    <script>
+
+        //for loop
+
+        var number = "";
+        for (i = 1; i < 11; i++) {
+            number += i + "<br>";
+        }
+        document.getElementById("result").innerHTML = number;
+        // random value is rounded of 
+        document.write("The random value is " + Math.floor(Math.random() * 100));
+        document.write("<br>");
+        // for displaying current Date
+        var date = new Date();
+        document.write("Today's Date is " + date.getDate()+ " , " + date.toLocaleDateString('en-US'));
+    </script>
+</body>
+
+</html>

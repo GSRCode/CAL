@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <p id="result"></p>
+
+    <script>
+        // Create an object:
+        var person = {
+            firstName: "I",
+            age: 20,
+
+        };
+
+        // Display some data from the object:
+        document.getElementById("demo").innerHTML = person.firstName + " am " + person.age + " years old";
+
+        document.getElementById("demo2").innerHTML = person["firstname"] + " am " + person["age"] + " years old.";
+
+        var value1 = Math.acos(-1);
+        document.write("Demo1 Test Value : " + value1 + "<br>");
+
+        var value2 = Math.asin(1);
+        document.write("Demo2 Test Value : " + value2 + "<br>");
+
+        var value3 = Math.atan(.5);
+        document.write("Demo3 Test Value : " + value3 + "<br>");
+
+        function findMax() {
+
+            var max = 0;
+            for (i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("result").innerHTML = findMax(8, 4, 5, 6, 2);
+
+    </script>
+
+</body>
+
+</html>
