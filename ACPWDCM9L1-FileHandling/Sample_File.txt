@@ -1,0 +1,2 @@
+ File in write mode ....Hi! I am Penguin. I am a class 8 student from Pune
+ File in append mode ....Hi! My favourite subject is Mathematics
