@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript async / await</h2>
+    <p>async function add(a,b) { let response = await a + b; display(response); }</p>
+    <p>function display(sIn) { document.getElementById("result").innerHTML = sIn; }</p>
+    <p>add(5,20);</p>
+    <h1 id="result"></h1>
+    <script>
+      async function add(a,b) { let response = await a + b; display(response); }
+      function display(sIn) { document.getElementById("result").innerHTML = sIn; }
+      add(5,20);
+    </script>
+  </body>
+</html>
