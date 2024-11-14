@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		 <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+  		<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+	</head>	
+	<body>
+		<div style="width: 100vw; height: 100vh" id="mapContainer"> </div>
+
+			<script>
+                 var lat = {{data.latitute}};
+                 var lon = {{data.longitute}};
+
+
+/*
+				// Initialize the platform object:
+				 var platform = new H.service.Platform({'apikey': '{{apikey}}', 'useHTTPS': true});
+
+
+
+				// Obtain the default map types from the platform object
+				 var defaultLayers = platform.createDefaultLayers();
+
+				// Instantiate (and display) a map object:
+				 var map = new H.Map(
+					 document.getElementById('mapContainer'),
+					 defaultLayers.vector.normal.map,
+					 {
+						 zoom: 10,
+						 center: {lat:lat, lng:lon}
+					 }
+				 );
+				 //const marker = new H.Map.Marker({lat:lat, lng:lon});
+				 // Add the marker to the map:
+				 //map.addObject(marker);
+                 */
+                /**
+                 * Boilerplate map initialization code starts below:
+                 */
+
+                //Step 1: initialize communication with the platform
+                // In your own code, replace variable window.apikey with your own apikey
+                var platform = new H.service.Platform({'apikey': '{{apikey}}','useHTTPS': true});
+                var defaultLayers = platform.createDefaultLayers();
+                
+                //Step 2: initialize a map - this map is centered over Europe
+                var map = new H.Map(document.getElementById('mapContainer'),
+                    defaultLayers.vector.normal.map,{
+                    center: {lat: lat, lng: lon},
+                    zoom: 4,
+                    pixelRatio: window.devicePixelRatio || 1
+                });
+
+			</script>
+			{%if data and data.latitute and data.longitute %}
+
+            //lat = {{data.latitute}};
+            //lon = {{data.longitute}};
+
+				<h1>Details</h1>
+				<p> The latitude is {{data.latitute}} </p>
+				<p> The longitude is {{data.longitute}}</p>
+			
+			{%else%}apikey
+				<p>{{error}}</p>
+			{%endif%}
+	</body>
+</html>
